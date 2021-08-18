@@ -20,8 +20,11 @@ Route::prefix('xi-admin')->name('admin.')->group(function() {
     Route::post('/doLogin', 'LoginController@doLogin')->name('doLogin');
 
     Route::middleware(['CHECK_ADMIN_LOGIN'])->group(function() {
+
         Route::get('/dashboard', 'DashboardController@dashboard')->name('dashboard');
         Route::get('/logout', 'LoginController@logout')->name('logout');
+
+        Route::match(['get', 'post'], '/profile', 'UserController@adminProfile')->name('profile');
     });
 
 });
