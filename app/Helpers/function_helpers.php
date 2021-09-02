@@ -36,10 +36,10 @@ use App\Models\Firms;
  */
 function getFirmList()
 {
-    return Firms::all();
+    // return Firms::all();
 }
 
 function getFirm($id)
 {
-    return Firms::find($id);
+    // return Firms::find($id);
 }
