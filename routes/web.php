@@ -26,7 +26,7 @@ Route::get('/clear-cache', function () {
 	Artisan::call('view:clear');
 	Artisan::call('config:clear');
 	Artisan::call('cache:clear');
-	return 'All Cache Erase';
+	return 'All Cache Erased';
 });
 
 /* ----------------------------- End Routes ----------------------------- */
